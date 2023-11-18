@@ -1,4 +1,10 @@
 import Navbar from "../components/Navbar/Navbar";
+import {
+   FacebookLogo,
+   InstagramLogo,
+   LinkedinLogo,
+   GithubLogo,
+} from "@phosphor-icons/react";
 
 const Home = () => {
    return (
@@ -21,7 +27,7 @@ const Home = () => {
                <h1 className="text-4xl flex flex-col items-center font-light">
                   Im a <span className="font-bold">fullstack developer</span>
                </h1>
-               <p className="max-w-xl text-center mt-1">
+               <p className="max-w-xl text-center mt-1 md:text-base text-sm">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                   Porro incidunt quidem dolorem nulla tempora amet accusantium
                   reprehenderit accusamus animi debitis.
@@ -29,15 +35,27 @@ const Home = () => {
                <div className="flex gap-3 mt-3">
                   <a
                      href="#about"
-                     className="border py-1 px-4 rounded-2xl hover:bg-color-main"
+                     className="border p-1 rounded-2xl hover:bg-color-main"
                   >
-                     About
+                     <FacebookLogo size={32} />
                   </a>
                   <a
                      href="#contact"
-                     className="border py-1 px-4 rounded-2xl hover:bg-color-main"
+                     className="border p-1 rounded-2xl hover:bg-color-main"
                   >
-                     Contact Me
+                     <InstagramLogo size={32} />
+                  </a>
+                  <a
+                     href="#contact"
+                     className="border p-1 rounded-2xl hover:bg-color-main"
+                  >
+                     <LinkedinLogo size={32} />
+                  </a>
+                  <a
+                     href="#contact"
+                     className="border p-1 rounded-2xl hover:bg-color-main"
+                  >
+                     <GithubLogo size={32} />
                   </a>
                </div>
             </div>
