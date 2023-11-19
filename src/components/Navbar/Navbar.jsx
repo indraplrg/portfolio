@@ -4,7 +4,7 @@ import { useState } from "react";
 const Navbar = () => {
    const [open, setOpen] = useState(false);
    return (
-      <header className="flex justify-between p-4 items-center bg-color-secondary text-color-accent">
+      <header className="flex justify-between p-6 items-center bg-color-secondary text-color-accent fixed z-10 w-full">
          <h3 className="text-xl">
             <a href="/" className="font-semibold">
                Indra Puluraga
