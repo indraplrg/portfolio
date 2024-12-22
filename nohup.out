@@ -1,0 +1,20 @@
+[1222/155118.808504:ERROR:file_io_posix.cc(153)] open /home/indra/.config/Code/Crashpad/pending/6679c37d-59dc-4c34-ac34-308ddce47ec1.lock: File exists (17)
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+[90m[main 2024-12-22T07:51:20.674Z][0m update#setState idle
+[90m[main 2024-12-22T07:51:50.741Z][0m update#setState checking for updates
+[90m[main 2024-12-22T07:51:50.771Z][0m update#setState available for download
+[7998:1222/155151.807378:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 1 times!
+[7998:1222/155153.073843:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 2 times!
+[90m[main 2024-12-22T07:51:56.193Z][0m update#setState idle
+[7998:1222/155156.285688:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 3 times!
+[90m[main 2024-12-22T07:53:05.449Z][0m Extension host with pid 8325 exited with code: 0, signal: unknown.
+[91m[main 2024-12-22T07:53:05.536Z][0m [UtilityProcessWorker]: terminated unexpectedly with code 82, signal: unknown
+[1222/155515.303750:ERROR:file_io_posix.cc(153)] open /home/indra/.config/Code/Crashpad/pending/6679c37d-59dc-4c34-ac34-308ddce47ec1.lock: File exists (17)
+MESA-INTEL: warning: Haswell Vulkan support is incomplete
+[90m[main 2024-12-22T07:55:16.046Z][0m update#setState idle
+[9927:1222/155520.517077:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 1 times!
+[9927:1222/155527.123832:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 2 times!
+[9927:1222/155530.092752:ERROR:gl_surface_presentation_helper.cc(260)] GetVSyncParametersIfAvailable() failed for 3 times!
+[90m[main 2024-12-22T07:55:46.055Z][0m update#setState checking for updates
+[90m[main 2024-12-22T07:55:46.440Z][0m update#setState idle
+[9860:1222/155608.453729:ERROR:atom_cache.cc(230)] Add chromium/from-privileged to kAtomsToCache
