@@ -1,3 +1,4 @@
+import bgImg from "../assets/abstract_background.jpg";
 import Card from "../components/Card";
 
 const Project = () => {
@@ -5,7 +6,7 @@ const Project = () => {
     <div className="relative flex min-h-screen flex-col gap-4 p-5" id="project">
       <div className="absolute inset-0 -z-10 opacity-35">
         <img
-          src="./src/assets/abstract_background.jpg"
+          src={bgImg}
           alt="background-image"
           className="h-full w-full object-cover object-center"
         />

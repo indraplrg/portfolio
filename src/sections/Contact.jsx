@@ -1,3 +1,4 @@
+import bgImg from "../assets/abstract_background.jpg";
 import { useState } from "react"; // 1. Tambahkan state untuk handling loading & status
 import {
   EnvelopeSimpleIcon,
@@ -23,7 +24,7 @@ const Contact = () => {
     formData.append("access_key", "68a4f517-ecf1-48ad-a6b9-136aacb896bd");
 
     try {
-      const response = await fetch("https://web3forms.com", {
+      const response = await fetch("https://web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
@@ -52,7 +53,7 @@ const Contact = () => {
     >
       <div className="absolute inset-0 -z-10 opacity-35">
         <img
-          src="./src/assets/abstract_background.jpg"
+          src={bgImg}
           alt="background-image"
           className="h-full w-full object-cover object-center"
         />

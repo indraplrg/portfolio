@@ -1,3 +1,4 @@
+import bgImg from "../assets/abstract_background.jpg";
 import Card from "../components/Card";
 
 const Skill = () => {
@@ -8,7 +9,7 @@ const Skill = () => {
     >
       <div className="absolute inset-0 -z-10 opacity-35">
         <img
-          src="./src/assets/abstract_background.jpg"
+          src={bgImg}
           alt="background-image"
           className="h-full w-full object-cover object-center"
         />

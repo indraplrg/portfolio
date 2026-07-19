@@ -28,7 +28,7 @@ const Navbar = () => {
       <h1 className="font-bebas-neue my-5 hidden text-6xl font-semibold capitalize md:block">
         indra<span className="text-[#a1d12c]">.</span>
       </h1>
-      <div className="hidden min-h-screen flex-col justify-between gap-3 md:flex">
+      <div className="hidden flex-col justify-between gap-3 md:flex">
         <div className="flex flex-col gap-3">
           <Button classname="w-42 ">
             <Link
@@ -67,7 +67,7 @@ const Navbar = () => {
             </Link>
           </Button>
         </div>
-        <div className="flex flex-col gap-y-1">
+        <div className="mt-48 flex flex-col gap-y-1">
           <h4 className="font-bebas-neue text-xl font-semibold uppercase">
             find me on
           </h4>

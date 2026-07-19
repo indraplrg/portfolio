@@ -1,3 +1,6 @@
+import bgImg from "../assets/abstract_background.jpg";
+import profileImg from "../assets/profile.webp";
+
 import Card from "../components/Card";
 import {
   BrowserIcon,
@@ -27,7 +30,7 @@ const Home = () => {
       {/* background image */}
       <div className="absolute inset-0 -z-10 opacity-35">
         <img
-          src="./src/assets/abstract_background.jpg"
+          src={bgImg}
           alt="background-image"
           className="h-full w-full object-cover object-center"
         />
@@ -47,7 +50,7 @@ const Home = () => {
             <div className="flex w-full gap-4">
               <div className="h-32 w-52 border-2 p-2 shadow-[4px_4px_0_0_rgba(34,34,34,1)] lg:h-50 lg:w-50">
                 <img
-                  src="./src/assets/profile.webp"
+                  src={profileImg}
                   className="h-full w-full border-2 object-cover"
                 />
               </div>
