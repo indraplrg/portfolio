@@ -24,7 +24,7 @@ const Contact = () => {
     formData.append("access_key", "68a4f517-ecf1-48ad-a6b9-136aacb896bd");
 
     try {
-      const response = await fetch("https://web3forms.com/submit", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         body: formData,
       });
@@ -38,6 +38,7 @@ const Contact = () => {
         setResultMessage("❌ Something went wrong. Try again.");
       }
     } catch (error) {
+      console.error(error);
       setResultMessage("❌ Connection error. Please try again.");
     } finally {
       setIsSubmitting(false);
