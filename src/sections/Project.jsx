@@ -32,7 +32,7 @@ const Project = () => {
           return (
             <motion.div variants={framerConfig.cardVariants}>
               <Card
-                classname={`hover:translate-x-1 hover:bg-[#e5e5e7] hover:translate-y-1px hover:shadow-none transition-all ease-in-out cursor-pointer ${index === projects.length - 1 ? "md:0 mb-16" : ""}`}
+                classname={`hover:translate-x-1 hover:bg-[#e5e5e7] hover:translate-y-1px hover:shadow-none transition-all ease-in-out cursor-pointer ${index === projects.length - 1 ? "md:mb-0 mb-16" : ""}`}
               >
                 <a
                   className="font-bricolage w-full"

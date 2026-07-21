@@ -7,19 +7,10 @@ import framerConfig from "../libs/animationConfig";
 
 import Card from "../components/Card";
 import {
-  BrowserIcon,
   CertificateIcon,
-  CircuitryIcon,
-  DatabaseIcon,
   EnvelopeIcon,
-  EyeIcon,
-  GithubLogoIcon,
-  GitlabLogoIcon,
   GraduationCapIcon,
-  InstagramLogoIcon,
-  LinkedinLogoIcon,
   MapPinIcon,
-  WrenchIcon,
 } from "@phosphor-icons/react";
 
 const Home = () => {
@@ -49,7 +40,7 @@ const Home = () => {
       </motion.h1>
 
       {/* content */}
-      <div className="flex flex-col gap-4">
+      <div className="mb-16 flex flex-col gap-4 md:mb-0">
         {/* about me */}
         <motion.div variants={framerConfig.cardVariants}>
           <Card classname="w-full">
@@ -130,6 +121,41 @@ const Home = () => {
 
         {/* content */}
 
+        <motion.h1
+          variants={framerConfig.textVariants}
+          className="text-md font-bebas-neue mt-3 text-4xl capitalize lg:hidden"
+        >
+          focus area
+        </motion.h1>
+
+        <motion.div variants={framerConfig.cardVariants}>
+          <Card classname="lg:hidden -mt-3">
+            <ul className="flex w-full flex-col gap-3 text-sm capitalize">
+              {focusAreas.map((focusArea) => {
+                const Icon = focusArea.icon;
+                return (
+                  <>
+                    <li
+                      className="flex items-center gap-x-2"
+                      key={focusArea.id}
+                    >
+                      <Icon
+                        size={26}
+                        weight="bold"
+                        className="shadow-[4px,4px,0,0, rbga(34,34,34,1)] rounded-sm bg-[#a1d12c] p-1"
+                      />
+                      {focusArea.title}
+                    </li>
+                    <hr
+                      className={`opacity-25 ${5 === focusArea.id ? "hidden" : ""}`}
+                    />
+                  </>
+                );
+              })}
+            </ul>
+          </Card>
+        </motion.div>
+
         <div className="mt-3 flex flex-col">
           <motion.h1
             variants={framerConfig.textVariants}
@@ -138,21 +164,22 @@ const Home = () => {
             education & sertification
           </motion.h1>
 
-          <div className="mt-1 flex gap-4 overflow-scroll pr-2 pb-5">
+          <div className="mt-1 flex flex-col gap-4 overflow-scroll pr-2 pb-5">
             <motion.div
               variants={framerConfig.cardVariants}
               className="min-w-fit"
             >
               <Card classname="min-w-fit">
-                <div className="flex flex-col text-sm">
-                  <h3 className="font-bebas-neue flex w-fit items-center gap-1 bg-linear-to-t from-[#b9ff00] from-50% to-transparent to-50% px-1 text-3xl font-semibold capitalize">
-                    <GraduationCapIcon size={38} />
-                    education
-                  </h3>
-                  <h2 className="font-semibold">
-                    Universitas Ichsan Gorontalo
-                  </h2>
+                <div className="flex flex-col gap-1 text-sm lg:flex-row">
+                  <GraduationCapIcon size={38} className="hidden lg:block" />
                   <div className="font-medium text-gray-500">
+                    <h3 className="font-bebas-neue flex w-fit items-center gap-1 bg-linear-to-t from-[#b9ff00] from-50% to-transparent to-50% px-1 text-3xl font-semibold text-[#222] capitalize">
+                      <GraduationCapIcon size={38} className="lg:hidden" />
+                      education
+                    </h3>
+                    <h2 className="font-semibold text-[#222]">
+                      Universitas Ichsan Gorontalo
+                    </h2>
                     <p>Bachelor of Informatics Engineering</p>
                     <p>GPA: 3.74 / 4.00</p>
                   </div>
@@ -161,16 +188,19 @@ const Home = () => {
             </motion.div>
             <motion.div variants={framerConfig.cardVariants}>
               <Card classname="min-w-fit">
-                <div className="flex w-full flex-col text-sm">
-                  <h3 className="font-bebas-neue flex w-fit items-center gap-1 bg-linear-to-t from-[#b9ff00] from-50% to-transparent to-50% text-3xl font-semibold capitalize">
-                    <CertificateIcon size={38} />
-                    sertification
-                  </h3>
-                  <p className="font-bricolage-grotesque max-w-72 text-justify"></p>
-                  <h2 className="font-semibold">LSP Digital</h2>
-                  <div className="font-medium text-gray-500">
-                    <p>Junior web programmer</p>
-                    <p>Competent</p>
+                <div className="flex w-full flex-col gap-2 text-sm lg:flex-row">
+                  <CertificateIcon size={38} className="hidden lg:block" />
+
+                  <div>
+                    <h3 className="font-bebas-neue flex w-fit items-center gap-1 bg-linear-to-t from-[#b9ff00] from-50% to-transparent to-50% text-3xl font-semibold capitalize">
+                      <CertificateIcon size={38} className="lg:hidden" />
+                      sertification
+                    </h3>
+                    <h2 className="font-semibold">LSP Digital</h2>
+                    <div className="font-medium text-gray-500">
+                      <p>Junior web programmer</p>
+                      <p>Competent</p>
+                    </div>
                   </div>
                 </div>
               </Card>

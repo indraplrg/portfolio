@@ -12,45 +12,49 @@ import {
 
 const Navbar = () => {
   return (
-    <div className="fixed right-3 bottom-3 left-4 z-20 border-2 bg-[#f5f5f7] px-4 py-2 shadow-[6px_6px_0px_0px_rgba(34,34,34,1)] md:static md:min-h-screen md:shadow-none">
-      <ul className="font-bricolage-grotesque flex h-full justify-around font-medium md:hidden">
-        <li>
+    <div className="fixed right-0 bottom-0 left-0 z-20 border-2 bg-[#f5f5f7] shadow-[6px_6px_0px_0px_rgba(34,34,34,1)] md:static md:min-h-screen md:px-4 md:py-2 md:shadow-none">
+      <ul className="font-bricolage-grotesque flex h-full font-medium md:hidden">
+        <li className="grow">
           <NavLink
             to="/"
             className={({ isActive }) =>
-              `h-full w-full cursor-pointer transition-all ease-in-out hover:text-[#a1d12c] ${isActive ? "text-[#a1d12c]" : ""}`
+              `flex h-full w-full cursor-pointer flex-col items-center px-4 py-2 transition-all ease-in-out hover:bg-[#a1d12c] ${isActive ? "bg-[#a1d12c]" : ""}`
             }
           >
+            <HouseIcon size={24} />
             Home
           </NavLink>
         </li>
-        <li>
+        <li className="grow">
           <NavLink
             to="/projects"
             className={({ isActive }) =>
-              `cursor-pointerh-fullw-full transition-all ease-in-out hover:text-[#a1d12c] ${isActive ? "text-[#a1d12c]" : ""}`
+              `flex h-full w-full cursor-pointer flex-col items-center px-4 py-2 transition-all ease-in-out hover:bg-[#a1d12c] ${isActive ? "bg-[#a1d12c]" : ""}`
             }
           >
+            <FilesIcon size={24} />
             Project
           </NavLink>
         </li>
-        <li>
+        <li className="grow">
           <NavLink
             to="/skills"
             className={({ isActive }) =>
-              `cursor-pointerh-fullw-full transition-all ease-in-out hover:text-[#a1d12c] ${isActive ? "text-[#a1d12c]" : ""}`
+              `flex h-full w-full cursor-pointer flex-col items-center px-4 py-2 transition-all ease-in-out hover:bg-[#a1d12c] ${isActive ? "bg-[#a1d12c]" : ""}`
             }
           >
+            <TerminalIcon size={24} />
             Skill
           </NavLink>
         </li>
-        <li className="pr-1">
+        <li className="grow">
           <NavLink
             to="/contact"
             className={({ isActive }) =>
-              `cursor-pointerh-fullw-full transition-all ease-in-out hover:text-[#a1d12c] ${isActive ? "text-[#a1d12c]" : ""}`
+              `flex h-full w-full cursor-pointer flex-col items-center px-4 py-2 transition-all ease-in-out hover:bg-[#a1d12c] ${isActive ? "bg-[#a1d12c]" : ""}`
             }
           >
+            <EnvelopeIcon size={24} />
             Contact
           </NavLink>
         </li>
