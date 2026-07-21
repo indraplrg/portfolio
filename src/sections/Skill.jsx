@@ -1,4 +1,6 @@
 import { motion } from "motion/react";
+
+import { skills } from "../data/content";
 import bgImg from "../assets/abstract_background.jpg";
 import Card from "../components/Card";
 import framerConfig from "../libs/animationConfig";
@@ -27,87 +29,31 @@ const Skill = () => {
           skills & technologies
         </motion.h1>
         <div className="flex flex-col gap-y-4 overflow-x-scroll overflow-y-hidden pr-2 pb-2">
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="h-fit">
-              <div>
-                <h2 className="font-bebas-neue text-2xl">
-                  programming languages
-                </h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">javascript</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">typescript</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">python</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">golang</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">c#</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="h-fit">
-              <div>
-                <h2 className="font-bebas-neue text-2xl">languages</h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">indonesia</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">english</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">japan</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="h-fit">
-              <div>
-                <h2 className="font-bebas-neue text-2xl">backend frameworks</h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">express.js</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">asp.net core</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">gin</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">flask</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="h-fit">
-              <div>
-                <h2 className="font-bebas-neue text-2xl">
-                  frontend frameworks
-                </h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">react</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">next.js</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">tailwindcss</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">bootstrap</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="h-fit">
-              <div>
-                <h2 className="font-bebas-neue text-2xl">databases</h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">postgreSQL</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">mongodb</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">mysql</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
-          <motion.div variants={framerConfig.cardVariants}>
-            <Card classname="md:mb-0 mb-16 h-fit w-full">
-              <div className="w-full">
-                <h2 className="font-bebas-neue text-2xl">others</h2>
-                <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
-                  <li className="rounded-md bg-[#a1d12c] p-1">git</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">docker</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">linux</li>
-                  <li className="rounded-md bg-[#a1d12c] p-1">microservices</li>
-                </ul>
-              </div>
-            </Card>
-          </motion.div>
+          {skills.map((skill, index) => {
+            return (
+              <motion.div variants={framerConfig.cardVariants}>
+                <Card
+                  classname={`h-fit ${index === skills.length - 1 ? "md:0 mb-16" : ""}`}
+                >
+                  <div>
+                    <h2 className="font-bebas-neue text-2xl">{skill.title}</h2>
+                    <ul className="mt-1 flex gap-2 text-xs capitalize md:text-sm">
+                      {skill.items.map((item) => {
+                        return (
+                          <li
+                            key={item}
+                            className="rounded-md bg-[#a1d12c] p-1"
+                          >
+                            {item}
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                </Card>
+              </motion.div>
+            );
+          })}
         </div>
       </div>
     </motion.div>

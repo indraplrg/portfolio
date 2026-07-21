@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 
+import { socials, focusAreas } from "../data/content";
 import bgImg from "../assets/abstract_background.jpg";
 import profileImg from "../assets/profile.webp";
 import framerConfig from "../libs/animationConfig";
@@ -83,38 +84,19 @@ const Home = () => {
                     </li>
                   </ul>
                   <ul className="mt-1 flex w-fit justify-end gap-2 gap-x-4">
-                    <li className="rounded-md bg-[#222] p-1 text-white">
-                      <a
-                        href="https://www.github.com/indraplrg"
-                        target="_blank"
-                      >
-                        <GithubLogoIcon size={20} weight="fill" />
-                      </a>
-                    </li>
-                    <li className="rounded-md bg-[#222] p-1 text-white">
-                      <a
-                        href="https://www.gitlab.com/indralolx"
-                        target="_blank"
-                      >
-                        <GitlabLogoIcon size={20} weight="fill" />
-                      </a>
-                    </li>
-                    <li className="rounded-md bg-[#222] p-1 text-white">
-                      <a
-                        href="https://www.linkedin.com/in/indra-puluraga/"
-                        target="_blank"
-                      >
-                        <LinkedinLogoIcon size={20} />
-                      </a>
-                    </li>
-                    <li className="rounded-md bg-[#222] p-1 text-white">
-                      <a
-                        href="https://instagram.com/asykarindra"
-                        target="_blank"
-                      >
-                        <InstagramLogoIcon size={20} />
-                      </a>
-                    </li>
+                    {socials.map((social) => {
+                      const Icon = social.icon;
+                      return (
+                        <li
+                          className="rounded-md bg-[#222] p-1 text-white"
+                          key={social.id}
+                        >
+                          <a href={social.href} target="_blank">
+                            <Icon size={20} weight={social.weight} />
+                          </a>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
                 <span className="mr-4 hidden border-r-2 lg:block"></span>
@@ -123,46 +105,22 @@ const Home = () => {
                     foucs area
                   </h1>
                   <ul className="flex flex-col gap-y-2 text-sm capitalize">
-                    <li className="flex items-center gap-x-2">
-                      <WrenchIcon
-                        size={26}
-                        weight="bold"
-                        className="rounded-sm bg-[#a1d12c] p-1"
-                      />
-                      backend development
-                    </li>
-                    <li className="flex items-center gap-x-2">
-                      <BrowserIcon
-                        size={26}
-                        weight="bold"
-                        className="rounded-sm bg-[#a1d12c] p-1"
-                      />
-                      frontend development
-                    </li>
-                    <li className="flex items-center gap-x-2">
-                      <CircuitryIcon
-                        size={26}
-                        weight="bold"
-                        className="rounded-sm bg-[#a1d12c] p-1"
-                      />
-                      API design & integration
-                    </li>
-                    <li className="flex items-center gap-x-2">
-                      <DatabaseIcon
-                        size={26}
-                        weight="bold"
-                        className="rounded-sm bg-[#a1d12c] p-1"
-                      />{" "}
-                      database design
-                    </li>
-                    <li className="flex items-center gap-x-2">
-                      <EyeIcon
-                        size={26}
-                        weight="bold"
-                        className="rounded-sm bg-[#a1d12c] p-1"
-                      />{" "}
-                      computer vision
-                    </li>
+                    {focusAreas.map((focusArea) => {
+                      const Icon = focusArea.icon;
+                      return (
+                        <li
+                          className="flex items-center gap-x-2"
+                          key={focusArea.id}
+                        >
+                          <Icon
+                            size={26}
+                            weight="bold"
+                            className="rounded-sm bg-[#a1d12c] p-1"
+                          />
+                          {focusArea.title}
+                        </li>
+                      );
+                    })}
                   </ul>
                 </div>
               </div>
@@ -181,9 +139,12 @@ const Home = () => {
           </motion.h1>
 
           <div className="mt-1 flex gap-4 overflow-scroll pr-2 pb-5">
-            <motion.div variants={framerConfig.cardVariants}>
+            <motion.div
+              variants={framerConfig.cardVariants}
+              className="min-w-fit"
+            >
               <Card classname="min-w-fit">
-                <div className="flex w-full flex-col text-sm">
+                <div className="flex flex-col text-sm">
                   <h3 className="font-bebas-neue flex w-fit items-center gap-1 bg-linear-to-t from-[#b9ff00] from-50% to-transparent to-50% px-1 text-3xl font-semibold capitalize">
                     <GraduationCapIcon size={38} />
                     education
