@@ -1,4 +1,6 @@
 import { HashRouter, Route, Routes } from "react-router";
+import { AnimatePresence } from "motion/react";
+
 import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./sections/Home";
@@ -11,12 +13,14 @@ const App = () => {
     <HashRouter>
       <div className="text-[#222222] md:flex">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Project />} />
-          <Route path="/skills" element={<Skill />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
+        <AnimatePresence mode="wait" initial={false}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/projects" element={<Project />} />
+            <Route path="/skills" element={<Skill />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
       </div>
     </HashRouter>
   );

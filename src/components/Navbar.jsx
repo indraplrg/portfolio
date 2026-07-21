@@ -34,6 +34,16 @@ const Navbar = () => {
             Project
           </NavLink>
         </li>
+        <li>
+          <NavLink
+            to="/skills"
+            className={({ isActive }) =>
+              `cursor-pointerh-fullw-full transition-all ease-in-out hover:text-[#a1d12c] ${isActive ? "text-[#a1d12c]" : ""}`
+            }
+          >
+            Skill
+          </NavLink>
+        </li>
         <li className="pr-1">
           <NavLink
             to="/contact"
