@@ -1,3 +1,15 @@
+import {
+  BrowserIcon,
+  CircuitryIcon,
+  DatabaseIcon,
+  EyeIcon,
+  GithubLogoIcon,
+  GitlabLogoIcon,
+  InstagramLogoIcon,
+  LinkedinLogoIcon,
+  WrenchIcon,
+} from "@phosphor-icons/react";
+
 export const projects = [
   {
     id: 1,

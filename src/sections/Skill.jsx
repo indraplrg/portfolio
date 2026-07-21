@@ -33,7 +33,7 @@ const Skill = () => {
             return (
               <motion.div variants={framerConfig.cardVariants}>
                 <Card
-                  classname={`h-fit ${index === skills.length - 1 ? "md:0 mb-16" : ""}`}
+                  classname={`h-fit ${index === skills.length - 1 ? "mb-16" : ""}`}
                 >
                   <div>
                     <h2 className="font-bebas-neue text-2xl">{skill.title}</h2>
