@@ -36,7 +36,7 @@ const Project = () => {
               >
                 <a
                   className="font-bricolage w-full"
-                  href="https://gitlab.com/indralolx/smart-parking-backend"
+                  href={project.link}
                   target="_blank"
                 >
                   <h1 className="font-bebas-neue text-2xl font-semibold">
