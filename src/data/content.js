@@ -35,6 +35,20 @@ export const projects = [
     link: "https://github.com/indraplrg/Klasifikasi-Kualitas-Ikan-Nila",
     technologies: ["Python", "Pytorch", "Timm", "Pandas", "Matplotlib"],
   },
+  {
+    id: 4,
+    title: "MovieNime",
+    description:
+      "A website for finding and exploring information about movies and anime all in one place, featuring a modern design.",
+    link: "https://github.com/indraplrg/MovieNime",
+    technologies: [
+      "C#",
+      "Blazor WebAssembly (.NET)",
+      "TailwindCSS",
+      "TMDB Api",
+      "Jikan Api",
+    ],
+  },
 ];
 
 export const skills = [
@@ -56,7 +70,7 @@ export const skills = [
   {
     id: 4,
     title: "frontend frameworks",
-    items: ["react", "next.js", "tailwindcss", "bootstrap"],
+    items: ["blazor", "react", "next.js", "tailwindcss", "bootstrap"],
   },
   {
     id: 5,
